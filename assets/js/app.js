@@ -83,7 +83,7 @@ let getMovieByName = (movie) => {
     $.ajax({
         type: 'GET',
         dataType: 'json',
-        url: 'http://www.omdbapi.com/?t=' + movie + '&apikey=fd1e0aa3',
+        url: 'https://www.omdbapi.com/?t=' + movie + '&apikey=fd1e0aa3',
         success: (data) => {
             displayMovieDetails(data);
         },
@@ -98,7 +98,7 @@ let getMovieByNameNYear = (name, year) => {
     $.ajax({
         type: 'GET',
         dataType: 'json',
-        url: 'http://www.omdbapi.com/?t=' + name + '&y=' + year + '&apikey=fd1e0aa3',
+        url: 'https://www.omdbapi.com/?t=' + name + '&y=' + year + '&apikey=fd1e0aa3',
         success: (data) => {
             displayMovieDetails(data);
         },
@@ -113,7 +113,7 @@ let getMovieByIMDBId = (id) => {
     $.ajax({
         type: 'GET',
         dataType: 'json',
-        url: 'http://www.omdbapi.com/?i=' + id + '&apikey=fd1e0aa3',
+        url: 'https://www.omdbapi.com/?i=' + id + '&apikey=fd1e0aa3',
         success: (data) => {
             displayMovieDetails(data);
         },
