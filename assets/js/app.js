@@ -1,6 +1,7 @@
 $(document).ready(() => {
     $('#searchResult1').hide();
     $('#noMovieFound').hide();
+    $('.loaderImage').hide();
 
     $('#movieName').keydown((e) => {
         if (e.keyCode == 13) {
@@ -79,12 +80,14 @@ $(document).ready(() => {
 });
 
 let getMovieByName = (movie) => {
+    $('.loaderImage').show();
     clearCard();
     $.ajax({
         type: 'GET',
         dataType: 'json',
         url: 'https://www.omdbapi.com/?t=' + movie + '&apikey=fd1e0aa3',
         success: (data) => {
+            $('.loaderImage').hide();
             displayMovieDetails(data);
         },
         error: (err) => {
@@ -94,12 +97,14 @@ let getMovieByName = (movie) => {
 };
 
 let getMovieByNameNYear = (name, year) => {
+    $('.loaderImage').show();
     clearCard();
     $.ajax({
         type: 'GET',
         dataType: 'json',
         url: 'https://www.omdbapi.com/?t=' + name + '&y=' + year + '&apikey=fd1e0aa3',
         success: (data) => {
+            $('.loaderImage').hide();
             displayMovieDetails(data);
         },
         error: (data) => {
@@ -109,12 +114,14 @@ let getMovieByNameNYear = (name, year) => {
 }
 
 let getMovieByIMDBId = (id) => {
+    $('.loaderImage').show();
     clearCard();
     $.ajax({
         type: 'GET',
         dataType: 'json',
         url: 'https://www.omdbapi.com/?i=' + id + '&apikey=fd1e0aa3',
         success: (data) => {
+            $('.loaderImage').hide();
             displayMovieDetails(data);
         },
         error: (err) => {
