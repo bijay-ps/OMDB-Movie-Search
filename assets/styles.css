@@ -3,3 +3,8 @@
     background-repeat: no-repeat;
     background-size: cover;  
 }
+
+.poster {
+    height: 60vh;
+    width: auto;
+}

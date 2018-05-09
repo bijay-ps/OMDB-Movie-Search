@@ -38,15 +38,6 @@
                 </form>
             </div>
         </div>
-        <div id="searchResult1">
-            <h4>Search Result</h4>
-            <div class="card" style="width: 70vw;">
-                <div class="card-body">
-                    <h5 class="card-title" id="mTitle1"><small id="mYear1"></small></h5>
-                    <p class="card-text" id="mPlot1"></p>
-                </div>
-            </div>
-        </div>
         <hr>
         <div class="row">
             <div class="col">
@@ -60,9 +51,27 @@
                 <form class="form-inline">
                     <label class="sr-only" for="imdbId">IMDB ID</label>
                     <input type="text" class="form-control mb-2 mr-sm-2" id="imdbId" placeholder="IMDB ID">
-        
                     <button type="button" class="btn btn-success mb-2" id="movie-by-id">Search My Movie</button>
                 </form>
+            </div>
+        </div>
+        <hr>
+        <div id="noMovieFound">
+            <h6>Sorry no movie found. Make sure that you have typed the correct name with proper spaces</h6>
+        </div>
+        <div id="searchResult1">
+            <h4>Search Result</h4>
+            <div class="card" style="width: 50vmax;">
+                <img class="card-img-top poster" id="poster" alt="Poster">
+                <div class="card-body">
+                    <h5 class="card-title" id="mTitle"></h5>
+                    <p class="card-text" id="mYear"></p>
+                    <p class="card-text" id="mPlot"></p>
+                    <p class="card-text" id="mActors"></p>
+                    <p class="card-text" id="mIMDBRating"></p>
+                    <p class="card-text" id="mBoxOffc"></p>
+                    <p class="card-text" id="mProduction"></p>
+                </div>
             </div>
         </div>
     </div>
